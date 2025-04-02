@@ -1,8 +1,5 @@
-module "sns" {
-  source = "cloudposse/sns-topic/aws"
-  # Cloud Posse recommends pinning every module to a specific version
-   version     = "v1"
-
+module "sns_subscriptions" {
+  source     = "git::https://github.com/cloudposse/terraform-aws-sns-topic.git?ref=v1"
   attributes = var.attributes
   name       = var.name
   namespace  = var.namespace
@@ -10,8 +7,8 @@ module "sns" {
 
   subscribers = {
     opsgenie = {
-      protocol = "https"
-      endpoint = "https://api.example.com/v1/"
+      protocol               = "https"
+      endpoint               = "https://api.example.com/v1/"
       endpoint_auto_confirms = true
     }
   }
