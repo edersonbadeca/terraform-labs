@@ -1,4 +1,7 @@
 {
+  "extends": [
+    "config:base"
+  ],
   "ignoreTests": true,
   "packageRules": [
     {
@@ -8,5 +11,10 @@
       "automerge": true,
       "automergeType": "branch"
     }
-  ]
+  ],
+  "lockFileMaintenance": {
+    "enabled": true,
+    "recreateClosed": true,
+    "rebaseStalePrs": true
+  }
 }
