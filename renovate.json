@@ -5,7 +5,8 @@
       "matchDatasources": ["terraform-module"],
       "matchDepTypes": ["terraform"],
       "automerge": true,
-      "automergeType": "branch",
+      "platformAutomerge": true,
+      "automergeType": "pr",
       "labels": ["terraform", "dependencies"],
       "groupName": "Terraform Modules"
     }
