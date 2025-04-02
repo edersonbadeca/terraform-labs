@@ -1,0 +1,18 @@
+{
+  "extends": [
+    "config:base"
+  ],
+  "packageRules": [
+    {
+      "matchDatasources": ["terraform-module"],
+      "matchDepTypes": ["terraform"],
+      "automerge": true,
+      "automergeType": "branch",
+      "labels": ["terraform", "dependencies"],
+      "groupName": "Terraform Modules",
+      "force": {
+        "enabled": true
+      }
+    }
+  ]
+}
