@@ -1,7 +1,5 @@
 {
-  "extends": [
-    "config:base"
-  ],
+  "extends": ["config:base"],
   "packageRules": [
     {
       "matchDatasources": ["terraform-module"],
@@ -10,9 +8,7 @@
       "automergeType": "branch",
       "labels": ["terraform", "dependencies"],
       "groupName": "Terraform Modules",
-      "force": {
-        "enabled": true
-      }
+      "matchUpdateTypes": ["minor", "patch"]
     }
   ]
 }
