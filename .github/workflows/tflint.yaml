@@ -1,0 +1,27 @@
+name: tflint
+
+on:
+  workflow_call:
+  push:
+    branches:
+      - main
+
+jobs:
+  lint:
+    name: terraform-fmt
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out code
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+
+    - name: Install terraform
+      uses: hashicorp/setup-terraform@v3
+
+    - name: Lint terraform
+      shell: bash
+      run: |
+        terraform fmt --check --recursive --diff
+
