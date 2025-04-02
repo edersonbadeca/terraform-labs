@@ -1,15 +1,13 @@
 {
-  "extends": [
-    "config:base"
-  ],
+  "extends": ["config:base"],
+  "automerge": true,
+  "automergeType": "branch",
   "ignoreTests": true,
   "packageRules": [
     {
-      "matchDatasources": [
-        "terraform-module"
-      ],
-      "automerge": true,
-      "automergeType": "branch"
+      "matchDatasources": ["terraform-module"],
+      "matchDepTypes": ["terraform"],
+      "automerge": true
     }
   ],
   "lockFileMaintenance": {
