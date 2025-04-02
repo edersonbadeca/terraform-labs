@@ -1,6 +1,6 @@
 module "s3_bucket" {
   source    = "cloudposse/s3-bucket/aws"
-  version   = "v4.8.0"
+  version   = "v4.10.0"
   name      = "app"
   stage     = "test"
   namespace = "eg"
