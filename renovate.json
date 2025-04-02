@@ -1,12 +1,15 @@
 {
-  "extends": ["config:base"],
+  "extends": [
+    "config:recommended"
+  ],
   "ignoreTests": true,
   "packageRules": [
     {
-      "matchDatasources": ["terraform-module"],
+      "matchDatasources": [
+        "terraform-module"
+      ],
       "automerge": true,
       "automergeType": "branch"
     }
   ]
 }
-
