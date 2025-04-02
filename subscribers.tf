@@ -1,5 +1,5 @@
 module "sns_subscriptions" {
-  source     = "git::https://github.com/cloudposse/terraform-aws-sns-topic.git?ref=v1"
+  source     = "git::https://github.com/cloudposse/terraform-aws-sns-topic.git?ref=v1.2.0"
   attributes = var.attributes
   name       = var.name
   namespace  = var.namespace
